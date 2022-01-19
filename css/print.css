@@ -1,0 +1,54 @@
+@media print {
+    @page {
+        margin-inline: 2vw;
+        margin-block: 2vh;
+    }
+
+    * {
+        color: var(--deep-blue);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    blockquote {
+        display: block;
+        font-size: 5rem;
+    }
+
+    blockquote:before {
+        content: open-quote;
+    }
+
+    blockquote:after {
+        content: close-quote;
+    }
+
+    #container .content-article {
+        display: none;
+    }
+
+    #author {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #author figure img {
+        aspect-ratio: 1;
+        width: 100px;
+        border-radius: 150px;
+    }
+
+    #author p {
+        display: grid;
+    }
+
+    #author p span {
+        border: 1px solid var(--deep-blue);
+        padding-inline: 1vw;
+        padding-block: 1vh;
+    }
+
+    #page-footer {
+        display: none;
+    }
+}

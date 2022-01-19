@@ -1,0 +1,71 @@
+@media screen and (min-width:451px) {
+    body {
+        display: grid;
+        grid-template-rows: 10vh 50vh auto 10vh;
+    }
+    #container {
+        margin-inline: 2vw;
+        margin-block: 2vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1vw;
+    }
+
+    blockquote {
+        grid-column: span 2 / 1; 
+        text-align: center;  
+        font-size: x-large;
+        font-weight: bolder;
+    }
+
+    blockquote:before {
+        content: open-quote;
+    }
+
+    blockquote:after {
+        content: close-quote;
+    }
+
+    #author {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: var(--deep-blue);
+    }
+
+    #author figure figcaption {
+        text-align: center;
+    }
+
+    #author figure img {
+        border-radius: 150px;
+    }
+
+    #author h4 {
+        font-size: x-large;
+    }
+
+    #author p {
+        display: grid;
+    }
+
+    #author p span {
+        text-transform: uppercase;
+    }
+
+    #page-footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: var(--deep-blue);
+    }
+
+    #page-footer span {
+        font-size: x-large;
+    }
+
+    #page-footer a svg {
+        aspect-ratio: 1;
+        width: 50px;
+    }
+}
