@@ -1,317 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap');
+/* Mobile version */
+@media screen {
+    
+    body > header nav ul {
+        display: none;
+    }
 
-@media screen and (min-width:300px) and (max-width:450px) {
-/*     body {
-        background-color: var(--background-base);
-        color: var(--text-base);
+    body > header nav #burger-menu {
+        aspect-ratio: 1;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body > header nav #burger-menu button {
+        aspect-ratio: 1;
+        width: 100%;
+    }
+
+    body > main {
         display: grid;
-        gap: 5px;
-        box-sizing: border-box;
-        grid-template-rows: repeat(auto-fit, 10vh);
-        margin: auto;
-        --delay: 200ms;
+        gap: 4vh;
+        margin-block: 3vh;
     }
 
-    main > article > footer > a {
-        color: var(--text-highlight);
-        text-decoration-thickness: bolder;
-        text-underline-offset: 5px;
-        font-weight: bolder;
-        text-decoration-color: var(--decoration-highlight);
+    body.post-page > main > aside {
+        display: none;
     }
 
-    @keyframes articles-appear {
-        from {
-            transform: scale(0.3);
-            opacity: 0;
-            filter: hue-rotate(180deg)
-        }
-
-        to {
-            transform: scale(1);
-            opacity: 1;
-            filter: hue-rotate(0deg);
-        }
-    }
-
-    article {
-        background: var(--text-base);
-        color: var(--background-base);
-        width: 75vw;
+    .post {
+        border: 1px solid black;
+        border-radius: 25px;
+        /* box-shadow: 1px 1px 10px grey; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+        transition: 0.3s;
+        overflow: hidden;
+        width: 75%;
         margin-inline: auto;
-        border-radius: 15px;
-        box-shadow: 2px 2px 15px var(--decoration-highlight);
+    }
+    .post:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
     }
 
-    article > header {
-        padding-block: 2vh;
-        color: var(--text-base);
-        background: url('../img/lorem_ipsum.jpg') no-repeat;
+    .post > header {
+        position: relative;
     }
 
-    article > header > h3 {
-        background: rgba(0, 0, 0, 0.7);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        padding: 5px;
+    .post > header > h2 {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 10px;
+        background: rgba(130, 130, 130, 0.9);
+        color: blanchedalmond;
     }
 
-    article > summary {
-        text-align: justify;
-        color: var(--background-base);
+    .post > header > img {
+        width: 100%;
     }
 
-    article > summary:before {
-        content: 'td;dr';
-        font-weight: bold;
-        font-size: larger;
-        color: var(--background-base);
+    .post > main,
+    .post > footer {
+        padding: 25px;
     }
 
-    #art-1 {
-        animation: articles-appear calc(1 * var(--delay)) ease-in;
-    }
-
-    #art-2 {
-        animation: articles-appear calc(2 * var(--delay)) ease-in;
+    .post > footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     body > footer {
-        padding: 1%;
-        color: var(--background-base);
-        background: var(--text-base);
-    }
-
-    body > footer > a {
-        display: inline-block;
-    }
-
-    body > footer > a svg {
-        display: inline-block;
-        vertical-align: middle;
-        aspect-ratio: 1;
-        width: 25px;
-    }
-
-    h1, h2, h3 {
-        color: whitesmoke;
-    }
-    
-    h1 {
-        font-family: 'The Nautigal', cursive;
-    }
-    
-    h2 {
-        color: var(--text-highlight);
-    }
-
-    h3 {
-        font-size: larger;
-    }
-
-    #author {
-        display: block;
-        margin: auto;
-        text-align: center;
-    }
-
-    #author > h4 {
-        margin-top: 2vh;
-    }
-
-    #author:before {
-        content: 'The author';
-        font-size: large;
-        margin: auto;
-    }
-
-    #author:after {
-        content: 'Facts';
-    }
-
-    #author > figure > img {
-        border-radius: 150px;
-        display: block;
-    }
-
-    #container {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    ul {
-        list-style-type: none;
-        margin-left: -50px;
-    }
-
-    #related-links {
-        display: flow;
-        justify-content: space-between;
-    }*/
-
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    #page-header {
-        color: var(--background-base);
-        margin-inline: auto;
-        margin-block: 2vh;
-        text-align: center;
-    }
-
-    #page-header a {
-        color: var(--light-purple);
-        text-decoration-color: var(--pink);
-        text-decoration-thickness: 2px;
-        text-underline-offset: 2px;
-    }
-
-    #page-footer {
-        color: var(--deep-blue);
-        display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-    }
-    
-    #page-footer a svg {
-        aspect-ratio: 1;
-        width: 25px;
-    }
-    
-    #container {
-        width: 75vw;
-        margin-inline: auto;
-        flex-grow: 1;
-    }
-    
-    .content-article {
-        background: var(--smokey-white);
-        color: var(--deep-blue);
-        box-shadow: 1px 1px 10px var(--pink);
-        border-radius: 15px;
-        padding-bottom: 2vh;
-        margin-bottom: 5vh;
-        overflow: hidden;
-        text-align: justify;
-        display: flex;
-        flex-direction: column;
-        
+        padding: 25px;
     }
 
-    .content-article header {
-        background: url('../img/lorem_ipsum.jpg');
-        min-height: 25vh;
-        margin-bottom: 3vh;  
-        text-align: center; 
-    }
-
-    .content-article header h3 {
-        background: var(--deep-blue);
-        color: var(--smokey-white);
-    }
-
-    .content-article summary, p {
-        padding-inline: 3vw;
-    }
-
-    .content-article a {
-        color: var(--light-purple);
-        text-decoration-color: var(--pink);
-        text-underline-offset: 5px;
-        text-decoration-thickness: 2px;
-    }
-
-    .content-article a:before {
-        content: '[ ';
-    }
-
-    .content-article a:after {
-        content: ' ]';
-    }
-
-    .content-article footer {
-        background: var(--deep-blue);
-        color: var(--smokey-white);
-        padding-block: 2vh;
-    }
-
-    .content-article footer .additional-links {
-        display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 2vh;
-    }
-
-    .content-article footer .share-box {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .content-article footer .share-box:before {
-        content: 'Share on';
-    }
-
-    button {
-        border: 1px solid var(--pink);
-        background: var(--light-purple);
-        aspect-ratio: 1;
-        height: 50px;
-    }
-
-    blockquote {
-        display: flex;
-        text-align: justify;
-        padding: 2px;
-    }
-
-    blockquote:before {
-        content: '\BB ';
-        font-size: xx-large;
-        display: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    blockquote:after {
-        content: ' \AB';
-        font-size: xx-large;
-        display: absolute;
-        bottom: 0;
-        right: 0;
-    }
-
-    #author {
-        width: 75vw;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--deep-blue);
-    }
-
-    #author figure img {
-        border-radius: 150px;
-    }
-    
-    #author figure figcaption {
-        text-align: center;
-    }
-
-    #author p {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    #author p span:before {
-        content: ':';
-    }
-
-    #author p span:after {
-        content: ':';
-    }
-} 
-
-
+}

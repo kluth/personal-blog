@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My name is Matthias Kluth - I am your new developer!">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Matthias Kluth</title>
-</head>
-<body>
-    <header id="page-header">
-        <h1>Matthias Kluth</h1>
-        <h2>a dev's story</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A dev's tale" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon-96x96.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script src="js/main.js"></script>
+    <title>MK : A dev's tale</title>
+  </head>
+  <body class="home-page">
+    <header>
+      <h1>A dev's tale</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About me</li>
+          <li>Contact</li>
+        </ul>
+        <div id="burger-menu">
+          <!--TODO: open drawer on click-->
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
     </header>
-    <main id="container">
-        <article id="art-1" class="content-article">
-            <header>
-                <h3>Blindtext of the day #2</h3>
-            </header>
-            <summary>
-                Bavaria ipsum dolor sit amet is ma Wuascht a so a Schmarn da Kini mei nimmds midanand, di des wiad a Mordsgaudi noch da Giasinga Heiwog naa. Allerweil im Beidl Edlweiss Goaßmaß mim Radl foahn Maibam Biakriagal koa da, hog di hi.
-            </summary>
-            <footer>
-                <a href="pages/art-1.html">more</a>
-            </footer>
-        </article>
-        <article id="art-2" class="content-article">
-            <header>
-                <h3>Blindtext of the day #1</h3>
-            </header>
-            <summary>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aut veritatis distinctio nulla. Perferendis adipisci exercitationem quos beatae tempora nesciunt assumenda officiis culpa voluptas inventore quis accusantium, possimus, quas sapiente!
-            </summary>
-            <footer>
-                <a href="pages/art-2.html">more</a>
-            </footer>
-        </article>
-        <blockquote cite="https://de.wikipedia.org/wiki/Anonymus">
-            The best view comes after the hardest climb.
-        </blockquote>
+    <main>
+      <article class="post">
+        <header>
+          <h2>Fancy header 1</h2>
+          <img src="img/lorem_ipsum.jpg" alt="dgdfgdf">
+        </header>
+        <main>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nesciunt temporibus amet impedit exercitationem vel, neque doloribus ea omnis molestias recusandae suscipit officia ipsam doloremque fugiat harum numquam dolorum assumenda!</p>
+        </main>
+        <footer><button><img src="img/bookmark_black_24dp.svg" alt="" srcset=""></button><button><img src="img/share_black_24dp.svg" alt="" srcset=""></button><button onclick="gotoPost()"><img src="img/read_more_black_24dp.svg" alt="" srcset=""></button></footer>
+      </article>
+      <article class="post">
+        <header>
+          <h2>Fancy header 2</h2>
+          <img src="img/lorem_ipsum.jpg" alt="dfgd">
+        </header>
+        <main>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio assumenda unde officia, autem nulla alias quo at corporis esse nostrum? Natus, id asperiores! Qui reprehenderit nam modi reiciendis maiores quaerat!</p>
+        </main>
+        <footer><button><img src="img/bookmark_black_24dp.svg" alt="" srcset=""><button><img src="img/share_black_24dp.svg" alt="" srcset=""></button><button onclick="gotoPost()"><img src="img/read_more_black_24dp.svg" alt="" srcset=""></button></footer>
+      </article>
+      <article class="post">
+        <header>
+          <h2>Fancy header 3</h2>
+          <img src="img/lorem_ipsum.jpg" alt="dfgdhd">
+        </header>
+        <main>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt aliquid fugit impedit consequatur perspiciatis. Asperiores eaque corrupti quisquam provident deleniti nostrum qui doloribus cumque, tempora velit accusantium harum quam vero!</p>
+        </main>
+        <footer><button><img src="img/bookmark_black_24dp.svg" alt="" srcset=""><button><img src="img/share_black_24dp.svg" alt="" srcset=""></button><button onclick="gotoPost()"><img src="img/read_more_black_24dp.svg" alt="" srcset=""></button></footer>
+      </article>
     </main>
-    <section id="author">
-        <figure>
-            <img src="https://de.gravatar.com/userimage/21457410/e69cd29b9319a9f119b1ad1e8a53656d.jpg?size=200" alt="That's me">
-            <figcaption>
-                That's me, folks!
-            </figcaption>
-        </figure>
-        <h4>Matthias</h4>
-        <p>
-            <span>Father of 5</span>
-            <span>Passion for code</span>
-            <span>Geek</span>
-            <span>Masterschool graduate to be</span>
-        </p>
-    </section>
-    <footer id="page-footer">
-        <span>
-            Copyright &copy; 2022
-        </span> 
-        <a href="https://www.linkedin.com/in/matthias-kluth-a4ba651a7/">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="http://github.com/kluth">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
+    <footer>
+      Copyright &copy; 2022
     </footer>
-</body>
+  </body>
 </html>

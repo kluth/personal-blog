@@ -1,0 +1,24 @@
+/* Tablet version */
+@media screen and (min-width:768px) {
+     
+    body > header nav #burger-menu {
+        display: none;
+    }
+    
+    body > header nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        list-style-type: none;
+    }
+
+    body.post-page > main > aside {
+        display: block;
+    }
+
+    body.post-page > main > aside > section > header > figure > img {
+        border-radius: 150px;
+        width: 150px;
+    }
+
+}
