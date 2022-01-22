@@ -1,0 +1,51 @@
+@import "mobile.css";
+@import "tablet.css";
+@import "desktop.css";
+
+/* Common styling */
+body {
+  margin-inline: auto;
+  margin-block: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body > header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(10, 20, 30, 1);
+  color: rgb(255, 235, 205);
+}
+
+@keyframes pulsing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+blockquote {
+  text-align: center;
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  justify-self: stretch;
+  animation: pulsing 2s ease-in-out infinite;
+}
+
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+
+body.post-page > main > article > footer > button > svg {
+    aspect-ratio: 1;
+    width: 25px;
+}

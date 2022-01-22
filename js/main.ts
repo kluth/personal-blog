@@ -16,14 +16,21 @@ posts.forEach(post => {
     postsObserver.observe(post)
 }) */
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Loaded.')
-})
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Loaded.");
+});
 
 const gotoPost = () => {
-    document.location.href = '/post.html'
-}
+  document.location.href = "/post.html";
+};
 
 const goHome = () => {
-    document.location.href = '/index.html'
-}
+  document.location.href = "/index.html";
+};
+
+const toggleMenu = () => {
+  let menu = document.querySelector("ul");
+  menu?.classList.contains("visible-drawer")
+    ? menu?.attributes.removeNamedItem('class')
+    : menu?.classList.add("visible-drawer");
+};

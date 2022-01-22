@@ -5,6 +5,21 @@
         display: none;
     }
 
+    body > header nav ul.visible-drawer {
+        display: grid;
+        position: absolute;
+        top: 100px;
+        right: 25px;
+    }
+
+    body > header nav ul.visible-drawer li {
+        background: darkblue;
+        padding: 10px;
+        width: 150px;
+        aspect-ratio: 3/1;
+        z-index: 50;
+    }
+
     body > header nav #burger-menu {
         aspect-ratio: 1;
         width: 50px;
